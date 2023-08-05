@@ -8,7 +8,8 @@ import { useNavigate } from "react-router-dom";
 const Info = () => {
   const navigate = useNavigate();
 
-  const { setCards, setTurns, setGameStarted, setSeconds, setTimerColor } = useContext(TimerContext);
+  const { setCards, setTurns, setGameStarted, setSeconds, setTimerColor } =
+    useContext(TimerContext);
   const { nossaSeguros, iconsGame } = assets();
 
   // Shuffle cards
@@ -36,17 +37,21 @@ const Info = () => {
             SEGUROS
           </p>
         </div>
-        <button
-          className="btn_accept_ab"
-          onClick={() => {
-            handleClick(navigate, shuffleCards, setSeconds, setTimerColor);
-          }}
-        >
-          <strong>ACEITO O DESAFIO</strong>
-        </button>
-        <p>
-          <span className="description_ab">TOQUE PARA JOGAR</span>
-        </p>
+      </div>
+      <div className="second_content_ab">
+        <div className="second_content-container">
+          <button
+            className="btn_accept_ab"
+            onClick={() => {
+              handleClick(navigate, shuffleCards, setSeconds, setTimerColor);
+            }}
+          >
+            <strong>ACEITO O DESAFIO</strong>
+          </button>
+          <p>
+            <span className="description_ab">TOQUE PARA JOGAR</span>
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -54,7 +59,7 @@ const Info = () => {
 
 function handleClick(navigate, shuffleCards, setSeconds, setTimerColor) {
   shuffleCards();
-  setTimerColor('green')
+  setTimerColor("green");
   setSeconds(5);
   navigate("/game");
 }

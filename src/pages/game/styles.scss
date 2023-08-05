@@ -78,24 +78,28 @@
 }
 
 
-@media (max-width: 1080px) {
+@media (min-width: 1080px) {
+
+    .game_container_fl {
+        
+    }
 
 
     .header_logo_fl {
-        width: 36rem;
+        width: 6rem;
     }
 
     .highligt_fl {
-        font-size: 5rem;
+        font-size: 2rem;
     }
 
     .footer_info_fl {
-        font-size: 2rem;
+        font-size: 1rem;
     }
 
 
     .card {
-        width: 12rem !important;
+        width: 3rem !important;
     }
 
 

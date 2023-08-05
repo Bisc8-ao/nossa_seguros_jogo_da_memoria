@@ -49,22 +49,50 @@
   color: $white_main;
 }
 
-@media (max-width: 1080px) {
-  .logo_container_ab {
-    width: 36rem;
+@media (min-width: 1080px) {
+  .wrapper_ab {
+    width: 100%;
+    flex-direction: row;
   }
 
-  .text_container_ab {
-    font-size: 5rem;
+  .first_content_ab {
+    width: 50%;
+
+    .logo_container_ab {
+      width: 14rem;
+    }
+
+    .text_container_ab {
+      font-size: 1.8rem;
+    }
   }
 
-  .btn_accept_ab {
-    font-size: 4rem;
-    padding: 1rem 6rem;
+  .second_content_ab {
+    width: 50%;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $white_main;
+  }
+
+  .second_content_ab .btn_accept_ab {
+    font-size: 1rem;
+    padding: 1rem 3rem;
     border-radius: 5rem;
+    background-color: $blue_main;
+    color: $white_main
   }
 
-  .description_ab {
-    font-size: 2rem;
+  .second_content_ab .description_ab {
+    color: $blue_main;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1rem;
   }
+
+
 }
